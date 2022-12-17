@@ -1,0 +1,26 @@
+uuid: e33264c9-6eb0-4289-ba2e-af562aa6fc0a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - media_library
+_core:
+  default_config_hash: 7qJqToD1OQLAyeswpmg7M0LRxQlw1URQkJDWUJCnmR8
+name: media_library
+label: 'Media Library thumbnail (220×220)'
+effects:
+  75b076a8-1234-4b42-85db-bf377c4d8d5f:
+    uuid: 75b076a8-1234-4b42-85db-bf377c4d8d5f
+    id: image_scale
+    weight: 0
+    data:
+      width: 220
+      height: 220
+      upscale: false
+  357a82d8-88f9-4c3c-a354-a97589c01d46:
+    uuid: 357a82d8-88f9-4c3c-a354-a97589c01d46
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

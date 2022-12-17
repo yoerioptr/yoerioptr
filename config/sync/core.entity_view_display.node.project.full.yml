@@ -1,0 +1,25 @@
+uuid: 8eceed04-d5f4-4121-a7e5-fb9913f35740
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.project.field_company
+    - field.field.node.project.field_paragraphs
+    - field.field.node.project.field_technology
+    - field.field.node.project.field_website_multiple
+    - node.type.project
+  module:
+    - user
+id: node.project.full
+targetEntityType: node
+bundle: project
+mode: full
+content: {  }
+hidden:
+  field_company: true
+  field_paragraphs: true
+  field_technology: true
+  field_website_multiple: true
+  layout_builder__layout: true
+  links: true

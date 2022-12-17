@@ -1,0 +1,20 @@
+uuid: 10e01615-ffd9-4799-9bf9-e959b0931889
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yoerioptr
+_core:
+  default_config_hash: ABoKnlk20KHqZRw_2Qr4EvaFvH4lnQ2nuhunHeE1JIU
+id: yoerioptr_local_actions
+theme: yoerioptr
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

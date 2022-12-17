@@ -1,0 +1,4 @@
+name: 'Company subtheme (Nascom)'
+type: theme
+base theme: 'yoerioptr'
+core_version_requirement: ^9 || ^10

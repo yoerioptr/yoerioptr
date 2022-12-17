@@ -1,0 +1,21 @@
+uuid: aa10a043-fb23-4ecc-a2b3-6ef6aca432a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date_start
+    - taxonomy.vocabulary.company
+  module:
+    - datetime
+id: taxonomy_term.company.field_date_start
+field_name: field_date_start
+entity_type: taxonomy_term
+bundle: company
+label: 'Start date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

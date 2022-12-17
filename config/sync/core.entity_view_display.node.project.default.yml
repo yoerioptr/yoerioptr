@@ -1,0 +1,44 @@
+uuid: 660ab634-821a-43ec-bb0b-61d7d58835de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.field_company
+    - field.field.node.project.field_paragraphs
+    - field.field.node.project.field_technology
+    - field.field.node.project.field_website_multiple
+    - node.type.project
+  module:
+    - entity_reference_revisions
+    - link
+    - user
+id: node.project.default
+targetEntityType: node
+bundle: project
+mode: default
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_website_multiple:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_company: true
+  field_technology: true
+  links: true

@@ -1,0 +1,4 @@
+name: 'Base site theme'
+type: theme
+base theme: false
+core_version_requirement: ^9 || ^10

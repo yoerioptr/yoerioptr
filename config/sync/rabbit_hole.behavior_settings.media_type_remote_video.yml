@@ -1,0 +1,14 @@
+uuid: c49f46ac-74e0-4cfb-9b49-d5397c7d6980
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media_type_remote_video
+entity_type_id: media_type
+entity_id: remote_video
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
