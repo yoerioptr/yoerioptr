@@ -19,6 +19,8 @@ module:
   editor: 0
   elasticsearch_connector: 0
   entity_reference_revisions: 0
+  facets: 0
+  facets_views_area: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -67,6 +69,7 @@ module:
   varnish_purge_tags: 0
   varnish_purger: 0
   viewfield: 0
+  views_event_dispatcher: 0
   views_ui: 0
   extlink: 1
   pathauto: 1

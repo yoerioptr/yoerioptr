@@ -27,6 +27,7 @@
         "drupal/devel": "^5.1",
         "drupal/elasticsearch_connector": "^7.0@alpha",
         "drupal/extlink": "^1.7",
+        "drupal/facets": "^2.0",
         "drupal/field_group": "^3.4",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",

@@ -5,6 +5,7 @@ dependencies:
   config:
     - search_api.index.project
   module:
+    - facets_views_area
     - search_api
 id: projects
 label: Projects
@@ -20,6 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
+      title: Overview
       fields:
         title:
           id: title
@@ -93,15 +95,17 @@ display:
             multi_type: separator
             multi_separator: ', '
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 12
           total_pages: null
           id: 0
           tags:
             next: ››
             previous: ‹‹
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -110,6 +114,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -152,7 +157,17 @@ display:
           preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      use_ajax: true
+      header:
+        facets:
+          id: facets
+          table: views
+          field: facets
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets
+          empty: true
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -164,13 +179,15 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:search_api.index.project'
-  block_1:
-    id: block_1
-    display_title: Block
+  overview:
+    id: overview
+    display_title: Overview
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
+      block_description: Overview
     cache_metadata:
       max-age: -1
       contexts:
