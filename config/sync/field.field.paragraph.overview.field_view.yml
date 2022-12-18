@@ -13,13 +13,14 @@ entity_type: paragraph
 bundle: overview
 label: view
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   force_default: false
   allowed_views:
+    projects: projects
     content: '0'
     files: '0'
     frontpage: '0'

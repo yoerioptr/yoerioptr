@@ -1,0 +1,28 @@
+uuid: 8e9a8456-44c3-49bf-a494-6ff27969374e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.basic_page.field_paragraphs
+    - node.type.basic_page
+  module:
+    - entity_reference_revisions
+    - user
+id: node.basic_page.full
+targetEntityType: node
+bundle: basic_page
+mode: full
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true
+  search_api_excerpt: true

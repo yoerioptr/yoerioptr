@@ -6,25 +6,13 @@ dependencies:
     - field.field.node.basic_page.field_paragraphs
     - node.type.basic_page
   module:
-    - entity_reference_revisions
     - user
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
 mode: default
-content:
-  field_paragraphs:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  field_paragraphs: true
+  links: true
+  search_api_excerpt: true

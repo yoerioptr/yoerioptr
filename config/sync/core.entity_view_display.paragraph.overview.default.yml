@@ -14,7 +14,7 @@ mode: default
 content:
   field_view:
     type: viewfield_default
-    label: above
+    label: hidden
     settings:
       view_title: hidden
       always_build_output: false
@@ -22,4 +22,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true
