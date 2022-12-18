@@ -1,0 +1,7 @@
+uuid: bfa93ae5-560c-41a1-80d9-0f281b452672
+langcode: en
+status: true
+dependencies: {  }
+name: highlighted__desktop
+label: 'Highlighted (desktop)'
+effects: {  }

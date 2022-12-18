@@ -1,0 +1,20 @@
+uuid: 0ab0aac6-59c2-4192-8a27-fa7352d5b393
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yoerioptr_site
+_core:
+  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+id: yoerioptr_site_page_title
+theme: yoerioptr_site
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

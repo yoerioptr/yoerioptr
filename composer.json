@@ -19,11 +19,15 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.3",
         "drupal/coffee": "^1.2",
+        "drupal/config_split": "^2.0@RC",
         "drupal/core": "^9.5",
         "drupal/core-composer-scaffold": "^9.5",
         "drupal/core-project-message": "^9.5",
         "drupal/core-recommended": "^9.5",
+        "drupal/devel": "^5.1",
         "drupal/field_group": "^3.4",
+        "drupal/gin": "^3.0@RC",
+        "drupal/gin_toolbar": "^1.0@RC",
         "drupal/hook_event_dispatcher": "^3.3",
         "drupal/igbinary": "2.0.x-dev@dev",
         "drupal/paragraphs": "^1.15",
@@ -107,6 +111,14 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+            "drupal/core": {
+                "Add responsive image width and height attributes": "https://www.drupal.org/files/issues/2022-10-10/3192234-241-9.5.x_1.patch"
+            },
+            "drupal/hook_event_dispatcher": {
+                "Add hook_entity_bundle_info_alter event": "https://www.drupal.org/files/issues/2022-12-01/hook_event_dispatcher-entity_bundle_info_alter-3324852-2.patch"
+            }
         }
     }
 }

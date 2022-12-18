@@ -1,0 +1,30 @@
+yoerioptr.mobile:
+  label: 'Mobile'
+  mediaQuery: 'all and (max-width: 575.98px)'
+  weight: 4
+  multipliers:
+    - 1x
+yoerioptr.tablet:
+  label: 'Tablet'
+  mediaQuery: 'all and (min-width: 576px) and (max-width: 767.98px)'
+  weight: 3
+  multipliers:
+    - 1x
+yoerioptr.desktop:
+  label: 'Desktop'
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 991.98px)'
+  weight: 2
+  multipliers:
+    - 1x
+yoerioptr.large:
+  label: 'Large'
+  mediaQuery: 'all and (min-width: 992px) and (max-width: 1199.98px)'
+  weight: 1
+  multipliers:
+    - 1x
+yoerioptr.extreme:
+  label: 'Extreme'
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 0
+  multipliers:
+    - 1x

@@ -4,41 +4,24 @@ status: true
 dependencies:
   config:
     - field.field.node.project.field_company
+    - field.field.node.project.field_date_end
+    - field.field.node.project.field_date_start
     - field.field.node.project.field_paragraphs
     - field.field.node.project.field_technology
     - field.field.node.project.field_website_multiple
     - node.type.project
   module:
-    - entity_reference_revisions
-    - link
     - user
 id: node.project.default
 targetEntityType: node
 bundle: project
 mode: default
-content:
-  field_paragraphs:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_website_multiple:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
+content: {  }
 hidden:
   field_company: true
+  field_date_end: true
+  field_date_start: true
+  field_paragraphs: true
   field_technology: true
+  field_website_multiple: true
   links: true

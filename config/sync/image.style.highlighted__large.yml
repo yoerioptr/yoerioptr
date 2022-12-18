@@ -1,0 +1,21 @@
+uuid: 9675ba5a-54e0-49a2-82d3-cc1df22eeecf
+langcode: en
+status: true
+dependencies: {  }
+name: highlighted__large
+label: 'Highlighted (large)'
+effects:
+  b5f97599-c56d-4c6d-9685-d12fa63ec408:
+    uuid: b5f97599-c56d-4c6d-9685-d12fa63ec408
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: null
+      upscale: true
+  1f0b77fe-a36f-47d0-a2f1-237895977ab5:
+    uuid: 1f0b77fe-a36f-47d0-a2f1-237895977ab5
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

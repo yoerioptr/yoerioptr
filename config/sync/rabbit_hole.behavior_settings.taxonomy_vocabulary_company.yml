@@ -1,0 +1,14 @@
+uuid: 63ecde11-47d0-474b-9d1f-abdef1be855f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.company
+id: taxonomy_vocabulary_company
+entity_type_id: taxonomy_vocabulary
+entity_id: company
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

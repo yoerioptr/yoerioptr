@@ -1,0 +1,23 @@
+uuid: c238023d-24f3-4fa3-a586-603d1ace8a11
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.technology
+id: taxonomy_term.technology.default
+targetEntityType: taxonomy_term
+bundle: technology
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

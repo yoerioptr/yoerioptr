@@ -1,0 +1,21 @@
+uuid: b5c16f94-1be3-4690-8758-73eec1d9d802
+langcode: en
+status: true
+dependencies: {  }
+name: highlighted__tablet
+label: 'Highlighted (tablet)'
+effects:
+  184ace80-f2b8-4237-b7df-074590bcf337:
+    uuid: 184ace80-f2b8-4237-b7df-074590bcf337
+    id: image_scale
+    weight: 1
+    data:
+      width: 768
+      height: null
+      upscale: true
+  80af8df5-a7b4-4e35-a998-4a7769468a5f:
+    uuid: 80af8df5-a7b4-4e35-a998-4a7769468a5f
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

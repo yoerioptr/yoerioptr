@@ -1,0 +1,40 @@
+uuid: acc6a155-c34f-4cf4-93ae-8025afa358e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.highlighted
+    - image.style.highlighted__desktop
+    - image.style.highlighted__large
+    - image.style.highlighted__mobile
+    - image.style.highlighted__tablet
+id: highlighted
+label: Highlighted
+image_style_mappings:
+  -
+    breakpoint_id: yoerioptr_site.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: highlighted__mobile
+  -
+    breakpoint_id: yoerioptr_site.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: highlighted__tablet
+  -
+    breakpoint_id: yoerioptr_site.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: highlighted__desktop
+  -
+    breakpoint_id: yoerioptr_site.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: highlighted__large
+  -
+    breakpoint_id: yoerioptr_site.extreme
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: highlighted
+breakpoint_group: yoerioptr_site
+fallback_image_style: highlighted

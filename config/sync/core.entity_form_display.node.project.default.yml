@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.project.field_company
+    - field.field.node.project.field_date_end
+    - field.field.node.project.field_date_start
     - field.field.node.project.field_paragraphs
     - field.field.node.project.field_technology
     - field.field.node.project.field_website_multiple
     - node.type.project
   module:
+    - datetime
     - field_group
     - link
     - paragraphs
@@ -49,6 +52,7 @@ third_party_settings:
       children:
         - field_company
         - field_technology
+        - field_website_multiple
       label: Metadata
       region: content
       parent_name: group_tabs
@@ -69,6 +73,18 @@ content:
   field_company:
     type: options_buttons
     weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_end:
+    type: datetime_default
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_start:
+    type: datetime_default
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -102,7 +118,7 @@ content:
     third_party_settings: {  }
   field_website_multiple:
     type: link_default
-    weight: 27
+    weight: 9
     region: content
     settings:
       placeholder_url: ''

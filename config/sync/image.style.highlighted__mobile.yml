@@ -1,0 +1,21 @@
+uuid: d36e790c-ca37-4951-b454-84319c184acb
+langcode: en
+status: true
+dependencies: {  }
+name: highlighted__mobile
+label: 'Highlighted (mobile)'
+effects:
+  5704f041-36ac-4289-be18-c102ebbab7b4:
+    uuid: 5704f041-36ac-4289-be18-c102ebbab7b4
+    id: image_scale
+    weight: 1
+    data:
+      width: 567
+      height: null
+      upscale: true
+  b9a152ab-374f-45a9-bf13-0448695ee035:
+    uuid: b9a152ab-374f-45a9-bf13-0448695ee035
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

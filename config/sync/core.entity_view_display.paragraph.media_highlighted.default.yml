@@ -1,0 +1,22 @@
+uuid: 96c9ebd1-572f-4643-9895-4727023a6a06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_highlighted.field_media_single
+    - paragraphs.paragraphs_type.media_highlighted
+id: paragraph.media_highlighted.default
+targetEntityType: paragraph
+bundle: media_highlighted
+mode: default
+content:
+  field_media_single:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: highlighted
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

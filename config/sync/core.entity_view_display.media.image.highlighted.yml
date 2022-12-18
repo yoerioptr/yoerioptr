@@ -1,0 +1,32 @@
+uuid: 77313d19-0013-4424-93fb-d03ecd8961e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.highlighted
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.highlighted
+  module:
+    - responsive_image
+id: media.image.highlighted
+targetEntityType: media
+bundle: image
+mode: highlighted
+content:
+  field_media_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: highlighted
+      image_link: ''
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

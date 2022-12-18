@@ -1,0 +1,28 @@
+services:
+  # Event subscribers
+  site.event_subscriber.override_entity_classes:
+    class: \Drupal\site\EventSubscriber\OverrideEntityClasses
+    tags:
+      - { name: 'event_subscriber' }
+
+  # Repositories
+  site.repository.page:
+    class: \Drupal\site\Repository\PageRepository
+    arguments:
+      - '@site.storage.node'
+
+  # Storages
+  site.storage.node:
+    class: \Drupal\node\NodeStorage
+    factory:
+      - '@entity_type.manager'
+      - 'getStorage'
+    arguments:
+      - 'node'
+  site.storage.taxonomy_term:
+    class: \Drupal\taxonomy\TermStorage
+    factory:
+      - '@entity_type.manager'
+      - 'getStorage'
+    arguments:
+      - 'taxonomy_term'

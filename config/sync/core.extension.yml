@@ -10,9 +10,11 @@ module:
   coffee: 0
   config: 0
   contextual: 0
+  core_event_dispatcher: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -21,10 +23,13 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  gin_toolbar: 0
+  hook_event_dispatcher: 0
   igbinary: 0
   image: 0
   inline_form_errors: 0
   layout_discovery: 0
+  libraries_manifests_mapping: 0
   link: 0
   media: 0
   media_library: 0
@@ -65,7 +70,9 @@ module:
   paragraphs: 11
   minimal: 1000
 theme:
-  stark: 0
   claro: 0
   yoerioptr: 0
+  yoerioptr_claro_fixes: 0
+  yoerioptr_site: 0
+  gin: 0
 profile: minimal
