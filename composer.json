@@ -25,6 +25,8 @@
         "drupal/core-project-message": "^9.5",
         "drupal/core-recommended": "^9.5",
         "drupal/devel": "^5.1",
+        "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/extlink": "^1.7",
         "drupal/field_group": "^3.4",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",
@@ -35,11 +37,14 @@
         "drupal/purge": "^3.4",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/redis": "^1.6",
+        "drupal/search_api": "^1.28",
         "drupal/twig_tweak": "^3.2",
         "drupal/upgrade_status": "^3.18",
         "drupal/varnish_purge": "^2.1",
+        "drupal/viewfield": "^3.0@beta",
         "drupal/webform": "^6.1",
-        "drush/drush": "^11.3"
+        "drush/drush": "^11.3",
+        "nodespark/des-connector": "@dev"
     },
     "conflict": {
         "drupal/drupal": "*"
