@@ -1,0 +1,10 @@
+uuid: d4c02f76-4c0f-4ff3-8d0f-8be9172ac9fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.search_result_tile
+label: 'Search result tile'
+targetEntityType: node
+cache: true

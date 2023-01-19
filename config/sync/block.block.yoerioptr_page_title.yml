@@ -9,7 +9,7 @@ _core:
 id: yoerioptr_page_title
 theme: yoerioptr
 region: content
-weight: -30
+weight: 0
 provider: null
 plugin: page_title_block
 settings:

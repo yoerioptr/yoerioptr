@@ -2,3 +2,11 @@ name: 'Base site theme'
 type: theme
 base theme: false
 core_version_requirement: ^9 || ^10
+
+regions:
+  messages: 'Messages'
+  navigation: 'Navigation'
+  content: 'Content'
+
+libraries:
+  - yoerioptr/main

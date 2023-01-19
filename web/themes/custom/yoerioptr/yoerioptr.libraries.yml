@@ -1,0 +1,6 @@
+main:
+  js:
+    assets/js/behaviors.js: { manifest: 'assets/manifest.json' }
+  css:
+    theme:
+      assets/css/base.css: { manifest: 'assets/manifest.json' }

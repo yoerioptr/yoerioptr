@@ -1,0 +1,21 @@
+uuid: 9bbf2acb-e043-437f-ac81-6cea0036a314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_formatted_long
+    - paragraphs.paragraphs_type.portrait_header
+  module:
+    - text
+id: paragraph.portrait_header.field_text_formatted_long
+field_name: field_text_formatted_long
+entity_type: paragraph
+bundle: portrait_header
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

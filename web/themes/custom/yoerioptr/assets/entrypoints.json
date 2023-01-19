@@ -1,0 +1,14 @@
+{
+  "entrypoints": {
+    "js/behaviors": {
+      "js": [
+        "/assets/js/behaviors.js"
+      ]
+    },
+    "css/base": {
+      "css": [
+        "/assets/css/base.css"
+      ]
+    }
+  }
+}

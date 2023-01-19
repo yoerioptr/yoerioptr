@@ -1,8 +1,9 @@
-uuid: 660ab634-821a-43ec-bb0b-61d7d58835de
+uuid: a58fd728-db26-41c2-80d6-83a7a10ef93a
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_result_tile
     - field.field.node.project.field_company
     - field.field.node.project.field_date_end
     - field.field.node.project.field_date_start
@@ -12,10 +13,10 @@ dependencies:
     - node.type.project
   module:
     - user
-id: node.project.default
+id: node.project.search_result_tile
 targetEntityType: node
 bundle: project
-mode: default
+mode: search_result_tile
 content: {  }
 hidden:
   field_company: true

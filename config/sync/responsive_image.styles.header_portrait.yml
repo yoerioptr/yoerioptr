@@ -1,0 +1,23 @@
+uuid: ce10f426-b687-4e7a-ad8c-176f2ef77617
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.header_portrait
+  theme:
+    - yoerioptr
+id: header_portrait
+label: 'Header portrait'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: header_portrait
+    breakpoint_id: yoerioptr.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: header_portrait
+    breakpoint_id: yoerioptr.extreme
+    multiplier: 1x
+breakpoint_group: yoerioptr
+fallback_image_style: header_portrait

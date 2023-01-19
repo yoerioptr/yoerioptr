@@ -10,7 +10,7 @@ use Drupal\site\Entity\Media\RemoteVideo;
 use Drupal\site\Entity\Node\BasicPage;
 use Drupal\site\Entity\Node\Bundle;
 use Drupal\site\Entity\Node\Project;
-use Drupal\site\Entity\Paragraph\MediaHighlighted;
+use Drupal\site\Entity\Paragraph\PortraitHeader;
 use Drupal\site\Entity\Paragraph\ParagraphType;
 use Drupal\site\Entity\Paragraph\Text;
 use Drupal\site\Entity\Term\Company;
@@ -34,7 +34,7 @@ final class OverrideEntityClasses implements EventSubscriberInterface {
 
   public function overrideParagraphBundleClasses(EntityBundleInfoAlterEvent $event): void {
     $bundles = &$event->getBundles()['paragraphs'];
-    $bundles[ParagraphType::MEDIA_HIGHLIGHTED->value]['class'] = MediaHighlighted::class;
+    $bundles[ParagraphType::PORTRAIT_HEADER->value]['class'] = PortraitHeader::class;
     $bundles[ParagraphType::TEXT->value]['class'] = Text::class;
   }
 

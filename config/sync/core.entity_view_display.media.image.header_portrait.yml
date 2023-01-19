@@ -1,23 +1,25 @@
-uuid: 2d4cfd56-8b5c-4727-a502-9096f8f26d21
+uuid: 107c68d4-6b23-4430-95a9-add8b0f34629
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.header_portrait
     - field.field.media.image.field_media_image
     - media.type.image
+    - responsive_image.styles.header_portrait
   module:
-    - image
-id: media.image.default
+    - responsive_image
+id: media.image.header_portrait
 targetEntityType: media
 bundle: image
-mode: default
+mode: header_portrait
 content:
   field_media_image:
-    type: image
+    type: responsive_image
     label: hidden
     settings:
+      responsive_image_style: header_portrait
       image_link: ''
-      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }

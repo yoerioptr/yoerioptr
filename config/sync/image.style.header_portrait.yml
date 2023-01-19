@@ -1,0 +1,21 @@
+uuid: 8565323d-7fec-40b8-9344-2b853f237d88
+langcode: en
+status: true
+dependencies: {  }
+name: header_portrait
+label: 'Header portrait'
+effects:
+  875858b0-832c-4d19-a523-70c7acb6b1c5:
+    uuid: 875858b0-832c-4d19-a523-70c7acb6b1c5
+    id: image_scale_and_crop
+    weight: -10
+    data:
+      width: 400
+      height: 500
+      anchor: center-center
+  21f8a320-68dd-4d30-a09c-a1d3953182eb:
+    uuid: 21f8a320-68dd-4d30-a09c-a1d3953182eb
+    id: image_convert
+    weight: -8
+    data:
+      extension: webp

@@ -1,0 +1,10 @@
+uuid: 31aec4a5-b18e-4b70-8645-d3140039790b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.header_portrait
+label: 'Header portrait'
+targetEntityType: media
+cache: true
