@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.company.field_date_end
     - field.field.taxonomy_term.company.field_date_start
+    - field.field.taxonomy_term.company.field_logo
     - field.field.taxonomy_term.company.field_website
     - taxonomy.vocabulary.company
   module:
@@ -41,6 +42,15 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_website:
     type: link
     label: above
@@ -53,4 +63,5 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

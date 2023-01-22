@@ -2,14 +2,15 @@
 
 namespace Drupal\site\Entity\Node;
 
-final class Project extends Node {
+use Drupal\site\Entity\DetailPageContainingEntityInterface;
+use Drupal\site\Entity\DetailPageContainingEntityTrait;
+use Drupal\site\Entity\ParagraphContainingEntityInterface;
+use Drupal\site\Entity\ParagraphContainingEntityTrait;
 
-  public function getActiveYears(): array {
-    $start_date = $this->get('field_date_start');
-    $end_date = $this->get('field_date_end');
+final class Project extends Node implements
+  DetailPageContainingEntityInterface,
+  ParagraphContainingEntityInterface {
 
-    dpm($start_date); dpm($end_date);
-    return [];
-  }
-
+  use DetailPageContainingEntityTrait,
+    ParagraphContainingEntityTrait;
 }

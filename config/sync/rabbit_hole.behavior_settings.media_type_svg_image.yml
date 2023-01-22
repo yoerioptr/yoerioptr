@@ -1,0 +1,14 @@
+uuid: 814db898-4fe2-4d0b-8790-c2077883486e
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.svg_image
+id: media_type_svg_image
+entity_type_id: media_type
+entity_id: svg_image
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

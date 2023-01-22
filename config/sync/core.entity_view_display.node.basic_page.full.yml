@@ -4,7 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.basic_page.field_meta_description
+    - field.field.node.basic_page.field_meta_image
+    - field.field.node.basic_page.field_meta_title
     - field.field.node.basic_page.field_paragraphs
+    - field.field.node.basic_page.field_teaser_description
+    - field.field.node.basic_page.field_teaser_image
+    - field.field.node.basic_page.field_teaser_title
     - node.type.basic_page
   module:
     - entity_reference_revisions
@@ -24,5 +30,11 @@ content:
     weight: 0
     region: content
 hidden:
+  field_meta_description: true
+  field_meta_image: true
+  field_meta_title: true
+  field_teaser_description: true
+  field_teaser_image: true
+  field_teaser_title: true
   links: true
   search_api_excerpt: true

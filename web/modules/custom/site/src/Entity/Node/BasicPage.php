@@ -2,6 +2,15 @@
 
 namespace Drupal\site\Entity\Node;
 
-final class BasicPage extends Node {
-  //
+use Drupal\site\Entity\DetailPageContainingEntityInterface;
+use Drupal\site\Entity\DetailPageContainingEntityTrait;
+use Drupal\site\Entity\ParagraphContainingEntityInterface;
+use Drupal\site\Entity\ParagraphContainingEntityTrait;
+
+final class BasicPage extends Node implements
+  DetailPageContainingEntityInterface,
+  ParagraphContainingEntityInterface {
+
+  use DetailPageContainingEntityTrait,
+    ParagraphContainingEntityTrait;
 }

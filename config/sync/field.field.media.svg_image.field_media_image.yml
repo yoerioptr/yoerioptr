@@ -1,16 +1,16 @@
-uuid: 20f46d52-9e99-466d-ab4e-1597672220c5
+uuid: afc53ce3-fcc5-4715-baaa-b71f64bee5c7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_media_image
-    - media.type.image
+    - media.type.svg_image
   module:
     - image
-id: media.image.field_media_image
+id: media.svg_image.field_media_image
 field_name: field_media_image
 entity_type: media
-bundle: image
+bundle: svg_image
 label: Image
 description: ''
 required: true
@@ -21,7 +21,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png jpg jpeg webp'
+  file_extensions: svg
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''

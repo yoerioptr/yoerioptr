@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Basic page'
 type: basic_page
-description: ''
+description: 'Simple web page'
 help: ''
 new_revision: true
 preview_mode: 0

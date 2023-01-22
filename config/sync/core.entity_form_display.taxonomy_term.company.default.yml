@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.taxonomy_term.company.field_date_end
     - field.field.taxonomy_term.company.field_date_start
+    - field.field.taxonomy_term.company.field_logo
     - field.field.taxonomy_term.company.field_website
     - taxonomy.vocabulary.company
   module:
     - datetime
     - link
+    - media_library
 id: taxonomy_term.company.default
 targetEntityType: taxonomy_term
 bundle: company
@@ -26,6 +28,13 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_logo:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_website:
     type: link_default

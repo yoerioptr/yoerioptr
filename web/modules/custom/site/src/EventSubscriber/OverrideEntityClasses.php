@@ -7,6 +7,7 @@ use Drupal\core_event_dispatcher\Event\Entity\EntityBundleInfoAlterEvent;
 use Drupal\site\Entity\Media\Image;
 use Drupal\site\Entity\Media\MediaType;
 use Drupal\site\Entity\Media\RemoteVideo;
+use Drupal\site\Entity\Media\SvgImage;
 use Drupal\site\Entity\Node\BasicPage;
 use Drupal\site\Entity\Node\Bundle;
 use Drupal\site\Entity\Node\Project;
@@ -24,6 +25,7 @@ final class OverrideEntityClasses implements EventSubscriberInterface {
     $bundles = &$event->getBundles()['media'];
     $bundles[MediaType::IMAGE->value]['class'] = Image::class;
     $bundles[MediaType::REMOTE_VIDEO->value]['class'] = RemoteVideo::class;
+    $bundles[MediaType::SVG_IMAGE->value]['class'] = SvgImage::class;
   }
 
   public function overrideNodeBundleClasses(EntityBundleInfoAlterEvent $event): void {

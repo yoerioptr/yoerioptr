@@ -7,7 +7,13 @@ dependencies:
     - field.field.node.project.field_company
     - field.field.node.project.field_date_end
     - field.field.node.project.field_date_start
+    - field.field.node.project.field_meta_description
+    - field.field.node.project.field_meta_image
+    - field.field.node.project.field_meta_title
     - field.field.node.project.field_paragraphs
+    - field.field.node.project.field_teaser_description
+    - field.field.node.project.field_teaser_image
+    - field.field.node.project.field_teaser_title
     - field.field.node.project.field_technology
     - field.field.node.project.field_website_multiple
     - node.type.project
@@ -22,7 +28,13 @@ hidden:
   field_company: true
   field_date_end: true
   field_date_start: true
+  field_meta_description: true
+  field_meta_image: true
+  field_meta_title: true
   field_paragraphs: true
+  field_teaser_description: true
+  field_teaser_image: true
+  field_teaser_title: true
   field_technology: true
   field_website_multiple: true
   links: true
