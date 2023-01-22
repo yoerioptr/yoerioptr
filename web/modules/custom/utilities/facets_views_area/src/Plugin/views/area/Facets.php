@@ -44,11 +44,11 @@ final class Facets extends AreaPluginBase {
     $facet_source_id = $this->getFacetSourceId();
     $facets = $this->facetManager->getFacetsByFacetSourceId($facet_source_id);
 
-    $sort = function (FacetInterface $facet_1, FacetInterface $facet_2): int {
-      return $facet_1->getWeight() <=> $facet_2->getWeight();
+    $sort_function = function (FacetInterface $f1, FacetInterface $f2): int {
+      return $f1->getWeight() <=> $f2->getWeight();
     };
 
-    usort($facets, $sort);
+    usort($facets, $sort_function);
 
     foreach ($facets as $facet) {
       $build[] = $this->facetManager->build($facet)[0];
