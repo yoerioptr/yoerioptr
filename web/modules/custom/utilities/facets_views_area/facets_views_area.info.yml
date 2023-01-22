@@ -5,4 +5,7 @@ package: 'Yoerioptr utilities'
 core_version_requirement: ^9.0 || ^10
 
 dependencies:
+  - drupal:facets
+  - drupal:search_api
+  - drupal:views
   - drupal:views_event_dispatcher

@@ -44,9 +44,11 @@ final class Facets extends AreaPluginBase {
     $facet_source_id = $this->getFacetSourceId();
     $facets = $this->facetManager->getFacetsByFacetSourceId($facet_source_id);
 
-    usort($facets, function (FacetInterface $facet_1, FacetInterface $facet_2): int {
+    $sort = function (FacetInterface $facet_1, FacetInterface $facet_2): int {
       return $facet_1->getWeight() <=> $facet_2->getWeight();
-    });
+    };
+
+    usort($facets, $sort);
 
     foreach ($facets as $facet) {
       $build[] = $this->facetManager->build($facet)[0];
@@ -55,14 +57,22 @@ final class Facets extends AreaPluginBase {
     return $build;
   }
 
+  /**
+   * @todo: This currently only works if the view uses a search api index.
+   */
   private function getFacetSourceId(): string {
     /** @var \Drupal\search_api\Query\Query $query */
     $query = $this->view->getQuery()->query();
 
-    // This currently only works if the view uses a search api index.
-    return $query instanceof Query
-      ? 'search_api:' . str_replace(':', '__', $query->getSearchId())
-      : '';
+    if ($query instanceof Query) {
+      return 'search_api:' . str_replace(
+        ':',
+        '__',
+        $query->getSearchId()
+      );
+    }
+
+    return '';
   }
 
 }

@@ -9,7 +9,8 @@ use Symfony\Component\DependencyInjection\Reference;
 final class siteServiceProvider extends ServiceProviderBase {
 
   public function alter(ContainerBuilder $container): void {
-    if ($container->hasDefinition('cache.backend.redis') && $container->hasDefinition('serialization.igbinary_gz')) {
+    if ($container->hasDefinition('cache.backend.redis')
+      && $container->hasDefinition('serialization.igbinary_gz')) {
       $container->getDefinition('cache.backend.redis')->setArguments([
         new Reference('redis.factory'),
         new Reference('cache_tags.invalidator.checksum'),

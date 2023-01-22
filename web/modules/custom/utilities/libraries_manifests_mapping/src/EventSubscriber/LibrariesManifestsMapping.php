@@ -11,10 +11,14 @@ final class LibrariesManifestsMapping implements EventSubscriberInterface {
 
   private array $manifests = [];
 
-  public function __construct(private readonly ThemeExtensionList $themeExtensionList) {
+  public function __construct(
+    private readonly ThemeExtensionList $themeExtensionList
+  ) {
   }
 
-  public function replaceLibraryCssSourceByManifestMapping(LibraryInfoAlterEvent $event): void {
+  public function replaceLibraryCssSourceByManifestMapping(
+    LibraryInfoAlterEvent $event
+  ): void {
     $extension = $event->getExtension();
 
     $libraries =& $event->getLibraries();
@@ -30,7 +34,9 @@ final class LibrariesManifestsMapping implements EventSubscriberInterface {
     }
   }
 
-  public function replaceLibraryJsSourceByManifestMapping(LibraryInfoAlterEvent $event): void {
+  public function replaceLibraryJsSourceByManifestMapping(
+    LibraryInfoAlterEvent $event
+  ): void {
     $extension = $event->getExtension();
 
     $libraries =& $event->getLibraries();
@@ -53,7 +59,8 @@ final class LibrariesManifestsMapping implements EventSubscriberInterface {
       $manifest = $this->manifests["$extension:{$options['manifest']}"]
         ??= $this->getManifestContents($extension, $options['manifest']);
 
-      $asset_destination = trim($manifest[$asset_source] ?? '', '/');
+      $asset_destination = $manifest[$asset_source] ?? '';
+      $asset_destination = trim($asset_destination, '/');
       if (empty($asset_destination)) {
         continue;
       }
@@ -66,7 +73,10 @@ final class LibrariesManifestsMapping implements EventSubscriberInterface {
     return $assets;
   }
 
-  private function getManifestContents(string $extension, string $manifest): array {
+  private function getManifestContents(
+    string $extension,
+    string $manifest
+  ): array {
     try {
       $path = realpath($this->themeExtensionList->getPath($extension));
       $manifest_contents = file_get_contents("$path/$manifest");
@@ -78,8 +88,10 @@ final class LibrariesManifestsMapping implements EventSubscriberInterface {
   }
 
   public static function getSubscribedEvents(): array {
-    $events[ThemeHookEvents::LIBRARY_INFO_ALTER][] = ['replaceLibraryCssSourceByManifestMapping'];
-    $events[ThemeHookEvents::LIBRARY_INFO_ALTER][] = ['replaceLibraryJsSourceByManifestMapping'];
+    $events[ThemeHookEvents::LIBRARY_INFO_ALTER] = [
+      ['replaceLibraryCssSourceByManifestMapping'],
+      ['replaceLibraryJsSourceByManifestMapping'],
+    ];
 
     return $events;
   }

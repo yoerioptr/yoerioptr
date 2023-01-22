@@ -21,36 +21,46 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 final class OverrideEntityClasses implements EventSubscriberInterface {
 
-  public function overrideMediaBundleClasses(EntityBundleInfoAlterEvent $event): void {
+  public function overrideMediaBundleClasses(
+    EntityBundleInfoAlterEvent $event
+  ): void {
     $bundles = &$event->getBundles()['media'];
     $bundles[MediaType::IMAGE->value]['class'] = Image::class;
     $bundles[MediaType::REMOTE_VIDEO->value]['class'] = RemoteVideo::class;
     $bundles[MediaType::SVG_IMAGE->value]['class'] = SvgImage::class;
   }
 
-  public function overrideNodeBundleClasses(EntityBundleInfoAlterEvent $event): void {
+  public function overrideNodeBundleClasses(
+    EntityBundleInfoAlterEvent $event
+  ): void {
     $bundles = &$event->getBundles()['node'];
     $bundles[Bundle::BASIC_PAGE->value]['class'] = BasicPage::class;
     $bundles[Bundle::PROJECT->value]['class'] = Project::class;
   }
 
-  public function overrideParagraphBundleClasses(EntityBundleInfoAlterEvent $event): void {
+  public function overrideParagraphBundleClasses(
+    EntityBundleInfoAlterEvent $event
+  ): void {
     $bundles = &$event->getBundles()['paragraphs'];
     $bundles[ParagraphType::PORTRAIT_HEADER->value]['class'] = PortraitHeader::class;
     $bundles[ParagraphType::TEXT->value]['class'] = Text::class;
   }
 
-  public function overrideTaxonomyTermBundleClasses(EntityBundleInfoAlterEvent $event): void {
+  public function overrideTaxonomyTermBundleClasses(
+    EntityBundleInfoAlterEvent $event
+  ): void {
     $bundles = &$event->getBundles()['taxonomy_term'];
     $bundles[Vocabulary::COMPANY->value]['class'] = Company::class;
     $bundles[Vocabulary::TECHNOLOGY->value]['class'] = Technology::class;
   }
 
   public static function getSubscribedEvents(): array {
-    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideMediaBundleClasses'];
-    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideNodeBundleClasses'];
-    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideParagraphBundleClasses'];
-    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideTaxonomyTermBundleClasses'];
+    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER] = [
+      ['overrideMediaBundleClasses'],
+      ['overrideNodeBundleClasses'],
+      ['overrideParagraphBundleClasses'],
+      ['overrideTaxonomyTermBundleClasses'],
+    ];
 
     return $events;
   }

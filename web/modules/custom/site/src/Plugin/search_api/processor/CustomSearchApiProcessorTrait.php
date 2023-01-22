@@ -10,7 +10,9 @@ use Drupal\search_api\Processor\ProcessorProperty;
 
 trait CustomSearchApiProcessorTrait {
 
-  public function getPropertyDefinitions(DatasourceInterface $datasource = NULL): array {
+  public function getPropertyDefinitions(
+    DatasourceInterface $datasource = NULL
+  ): array {
     return empty($datasource) ? [
       $this->getPluginId() => new ProcessorProperty(array_filter([
         'type' => $this->getFieldType(),
@@ -32,17 +34,20 @@ trait CustomSearchApiProcessorTrait {
     $entity = $item->getOriginalObject()->getValue();
     foreach ($fields as $field) {
       if ($entity instanceof ContentEntityInterface) {
-        $this->addContentEntityFieldValues($entity, $field, $item->getLanguage());
+        $this->addContentEntityFieldValues(
+          $entity,
+          $field,
+          $item->getLanguage()
+        );
       }
     }
   }
 
-  protected function addContentEntityFieldValues(
+  abstract protected function addContentEntityFieldValues(
     ContentEntityInterface $entity,
     FieldInterface $field,
-    string $langcode
-  ): void {
-  }
+    string $language
+  ): void;
 
   abstract protected function getFieldType(): string;
 
