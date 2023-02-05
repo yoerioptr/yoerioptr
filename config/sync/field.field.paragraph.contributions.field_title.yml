@@ -1,0 +1,19 @@
+uuid: 200824ca-1a3b-4dc2-8d3c-adf2704af622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.contributions
+id: paragraph.contributions.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: contributions
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

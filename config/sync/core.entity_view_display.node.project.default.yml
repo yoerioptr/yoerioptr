@@ -22,60 +22,18 @@ id: node.project.default
 targetEntityType: node
 bundle: project
 mode: default
-content:
-  field_meta_description:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_meta_image:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_meta_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_teaser_description:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_teaser_image:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_teaser_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 4
-    region: content
+content: {  }
 hidden:
   field_company: true
   field_date_end: true
   field_date_start: true
+  field_meta_description: true
+  field_meta_image: true
+  field_meta_title: true
   field_paragraphs: true
+  field_teaser_description: true
+  field_teaser_image: true
+  field_teaser_title: true
   field_technology: true
   field_website_multiple: true
   links: true

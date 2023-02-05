@@ -17,54 +17,14 @@ id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
 mode: default
-content:
-  field_meta_description:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_meta_image:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_meta_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_teaser_description:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_teaser_image:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_teaser_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 5
-    region: content
+content: {  }
 hidden:
+  field_meta_description: true
+  field_meta_image: true
+  field_meta_title: true
   field_paragraphs: true
+  field_teaser_description: true
+  field_teaser_image: true
+  field_teaser_title: true
   links: true
   search_api_excerpt: true

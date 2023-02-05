@@ -11,6 +11,7 @@ use Drupal\site\Entity\Media\SvgImage;
 use Drupal\site\Entity\Node\BasicPage;
 use Drupal\site\Entity\Node\Bundle;
 use Drupal\site\Entity\Node\Project;
+use Drupal\site\Entity\Paragraph\Contributions;
 use Drupal\site\Entity\Paragraph\PortraitHeader;
 use Drupal\site\Entity\Paragraph\ParagraphType;
 use Drupal\site\Entity\Paragraph\Text;
@@ -42,6 +43,7 @@ final class OverrideEntityClasses implements EventSubscriberInterface {
     EntityBundleInfoAlterEvent $event
   ): void {
     $bundles = &$event->getBundles()['paragraphs'];
+    $bundles[ParagraphType::CONTRIBUTIONS->value]['class'] = Contributions::class;
     $bundles[ParagraphType::PORTRAIT_HEADER->value]['class'] = PortraitHeader::class;
     $bundles[ParagraphType::TEXT->value]['class'] = Text::class;
   }

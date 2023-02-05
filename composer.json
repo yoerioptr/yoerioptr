@@ -10,6 +10,19 @@
     },
     "repositories": [
         {
+            "type": "package",
+            "package": {
+                "name": "yoerioptr/drupal_utilities",
+                "version": "dev-main",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/yoerioptr/drupal_utilities.git",
+                    "type": "git",
+                    "reference": "main"
+                }
+            }
+        },
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -46,9 +59,10 @@
         "drupal/upgrade_status": "^3.18",
         "drupal/varnish_purge": "^2.1",
         "drupal/viewfield": "^3.0@beta",
-        "drupal/webform": "^6.1",
+        "drupal/webform": "^6.2@beta",
         "drush/drush": "^11.3",
-        "nodespark/des-connector": "@dev"
+        "nodespark/des-connector": "@dev",
+        "yoerioptr/drupal_utilities": "@dev"
     },
     "conflict": {
         "drupal/drupal": "*"

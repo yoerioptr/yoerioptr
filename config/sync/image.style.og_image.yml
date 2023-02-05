@@ -1,0 +1,21 @@
+uuid: 4815b38b-e8ef-4e96-936a-a081155d3269
+langcode: en
+status: true
+dependencies: {  }
+name: og_image
+label: 'OG Image'
+effects:
+  12c7a25c-973e-4d1d-b930-6989577e81d7:
+    uuid: 12c7a25c-973e-4d1d-b930-6989577e81d7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 627
+      anchor: center-center
+  5d5c5547-ae0e-4096-b51c-131dcc7649c6:
+    uuid: 5d5c5547-ae0e-4096-b51c-131dcc7649c6
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg
