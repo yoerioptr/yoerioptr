@@ -1,0 +1,10 @@
+uuid: 3bb5196f-aba7-4bdd-9760-c0047c0b51e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.contribution
+label: Contribution
+targetEntityType: node
+cache: true

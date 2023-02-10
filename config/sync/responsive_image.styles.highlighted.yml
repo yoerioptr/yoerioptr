@@ -12,29 +12,29 @@ id: highlighted
 label: Highlighted
 image_style_mappings:
   -
-    breakpoint_id: yoerioptr_site.mobile
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: highlighted__mobile
-  -
-    breakpoint_id: yoerioptr_site.tablet
+    breakpoint_id: yoerioptr.mobile
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: highlighted__tablet
-  -
-    breakpoint_id: yoerioptr_site.desktop
+    breakpoint_id: yoerioptr.tablet
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: highlighted__desktop
-  -
-    breakpoint_id: yoerioptr_site.large
+    breakpoint_id: yoerioptr.desktop
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: highlighted__large
-  -
-    breakpoint_id: yoerioptr_site.extreme
+    breakpoint_id: yoerioptr.large
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: highlighted
-breakpoint_group: yoerioptr_site
+    breakpoint_id: yoerioptr.extreme
+    multiplier: 1x
+breakpoint_group: yoerioptr
 fallback_image_style: highlighted

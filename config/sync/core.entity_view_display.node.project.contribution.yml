@@ -1,9 +1,9 @@
-uuid: a58fd728-db26-41c2-80d6-83a7a10ef93a
+uuid: c6f0797b-69c2-496e-8e25-8b2dce206a69
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.search_result_tile
+    - core.entity_view_mode.node.contribution
     - field.field.node.project.field_company
     - field.field.node.project.field_date_end
     - field.field.node.project.field_date_start
@@ -18,12 +18,43 @@ dependencies:
     - field.field.node.project.field_website_multiple
     - node.type.project
   module:
+    - field_fallback
     - user
-id: node.project.search_result_tile
+id: node.project.contribution
 targetEntityType: node
 bundle: project
-mode: search_result_tile
-content: {  }
+mode: contribution
+content:
+  field_teaser_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_teaser_title:
+    type: field_fallback
+    label: hidden
+    settings:
+      fallback_field_formatter:
+        title: string
+        rh_action: string
+        rh_redirect: string
+        rh_redirect_fallback_action: string
+        field_meta_title: string
+      fallback_field: title
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   field_company: true
   field_date_end: true
@@ -32,9 +63,6 @@ hidden:
   field_meta_image: true
   field_meta_title: true
   field_paragraphs: true
-  field_teaser_description: true
-  field_teaser_image: true
-  field_teaser_title: true
   field_technology: true
   field_website_multiple: true
   links: true
