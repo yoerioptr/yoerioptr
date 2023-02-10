@@ -1,0 +1,10 @@
+uuid: ff20f6bd-5c50-4a72-bd19-4e6fcc4285e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.contribution
+label: Contribution
+targetEntityType: media
+cache: true

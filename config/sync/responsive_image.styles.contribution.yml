@@ -1,0 +1,18 @@
+uuid: 338b25ea-2477-453a-80e8-ec9d64596820
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.contribution
+  theme:
+    - yoerioptr
+id: contribution
+label: Contribution
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: contribution
+    breakpoint_id: yoerioptr.extreme
+    multiplier: 1x
+breakpoint_group: yoerioptr
+fallback_image_style: contribution

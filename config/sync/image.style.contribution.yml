@@ -1,0 +1,21 @@
+uuid: 53724cd6-f1a4-4bf0-8856-6eabf16cd8e2
+langcode: en
+status: true
+dependencies: {  }
+name: contribution
+label: Contribution
+effects:
+  213c8789-ee59-4c88-a70f-082a82f43afb:
+    uuid: 213c8789-ee59-4c88-a70f-082a82f43afb
+    id: image_convert
+    weight: -9
+    data:
+      extension: webp
+  f996b775-25d4-41e0-8dcd-5f749f715718:
+    uuid: f996b775-25d4-41e0-8dcd-5f749f715718
+    id: image_scale_and_crop
+    weight: -10
+    data:
+      width: 900
+      height: 450
+      anchor: center-center
