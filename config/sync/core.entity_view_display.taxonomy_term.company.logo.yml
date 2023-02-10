@@ -1,22 +1,31 @@
-uuid: 5f00a013-6fa0-41e3-8de2-6016d0f0dcdf
+uuid: ee9df441-ceb3-426c-b13b-f8bbdf5d4622
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.logo
     - field.field.taxonomy_term.company.field_date_end
     - field.field.taxonomy_term.company.field_date_start
     - field.field.taxonomy_term.company.field_logo
     - field.field.taxonomy_term.company.field_website
     - taxonomy.vocabulary.company
-id: taxonomy_term.company.default
+id: taxonomy_term.company.logo
 targetEntityType: taxonomy_term
 bundle: company
-mode: default
-content: {  }
+mode: logo
+content:
+  field_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   description: true
   field_date_end: true
   field_date_start: true
-  field_logo: true
   field_website: true
   search_api_excerpt: true

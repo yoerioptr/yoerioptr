@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.contributions.field_title
     - paragraphs.paragraphs_type.contributions
   module:
+    - flickity_fields
     - link
 id: paragraph.contributions.default
 targetEntityType: paragraph
@@ -27,9 +28,10 @@ content:
     weight: 1
     region: content
   field_entity_multiple:
-    type: entity_reference_entity_view
+    type: flickity_entity_view
     label: hidden
     settings:
+      flickity_settings: default_group
       view_mode: contribution
       link: false
     third_party_settings: {  }
