@@ -60,12 +60,12 @@
         "drupal/svg_image": "^1.16",
         "drupal/twig_tweak": "^3.2",
         "drupal/upgrade_status": "^3.18",
-        "drupal/varnish_purge": "^2.1",
         "drupal/viewfield": "^3.0@beta",
         "drupal/webform": "^6.2@beta",
         "drush/drush": "^11.3",
         "enshrined/svg-sanitize": "^0.15.4",
         "nodespark/des-connector": "@dev",
+        "yoerioptr/drupal_brecht": "@dev",
         "yoerioptr/drupal_utilities": "@dev"
     },
     "conflict": {
@@ -87,6 +87,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/sites/development.services.yml": false
             }
         },
         "installer-paths": {
@@ -141,10 +144,11 @@
         },
         "patches": {
             "drupal/core": {
-                "Add responsive image width and height attributes": "https://www.drupal.org/files/issues/2022-10-10/3192234-241-9.5.x_1.patch"
+                "Feature: Add responsive image width and height attributes": "https://www.drupal.org/files/issues/2022-10-10/3192234-241-9.5.x_1.patch",
+                "Feature: Add stream wrappers to access extension files": "https://www.drupal.org/files/issues/2021-12-15/1308152-395.patch"
             },
             "drupal/hook_event_dispatcher": {
-                "Add hook_entity_bundle_info_alter event": "https://www.drupal.org/files/issues/2022-12-01/hook_event_dispatcher-entity_bundle_info_alter-3324852-2.patch"
+                "Feature: Add hook_entity_bundle_info_alter event": "https://www.drupal.org/files/issues/2022-12-01/hook_event_dispatcher-entity_bundle_info_alter-3324852-2.patch"
             }
         }
     }

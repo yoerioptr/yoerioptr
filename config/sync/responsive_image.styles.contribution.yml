@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.contribution
+    - image.style.contribution__desktop
   theme:
     - yoerioptr
 id: contribution
@@ -11,8 +11,8 @@ label: Contribution
 image_style_mappings:
   -
     image_mapping_type: image_style
-    image_mapping: contribution
+    image_mapping: ''
     breakpoint_id: yoerioptr.extreme
     multiplier: 1x
 breakpoint_group: yoerioptr
-fallback_image_style: contribution
+fallback_image_style: contribution__desktop

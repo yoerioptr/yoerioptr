@@ -3,3 +3,17 @@ purgers:
     instance_id: eadeba441f
     plugin_id: varnish
     order_index: 2
+processors:
+  -
+    plugin_id: lateruntime
+    status: false
+  -
+    plugin_id: purge_ui_block_processor
+    status: true
+queuers:
+  -
+    plugin_id: coretags
+    status: false
+  -
+    plugin_id: purge_ui_block_queuer
+    status: true

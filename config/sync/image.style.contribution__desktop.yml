@@ -2,8 +2,8 @@ uuid: 53724cd6-f1a4-4bf0-8856-6eabf16cd8e2
 langcode: en
 status: true
 dependencies: {  }
-name: contribution
-label: Contribution
+name: contribution__desktop
+label: 'Contribution (desktop)'
 effects:
   213c8789-ee59-4c88-a70f-082a82f43afb:
     uuid: 213c8789-ee59-4c88-a70f-082a82f43afb
