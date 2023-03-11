@@ -65,7 +65,6 @@
         "drush/drush": "^11.3",
         "enshrined/svg-sanitize": "^0.15.4",
         "nodespark/des-connector": "@dev",
-        "yoerioptr/drupal_brecht": "@dev",
         "yoerioptr/drupal_utilities": "@dev"
     },
     "conflict": {

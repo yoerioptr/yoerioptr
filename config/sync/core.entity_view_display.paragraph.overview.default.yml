@@ -1,0 +1,35 @@
+uuid: dfff8326-8660-4738-9dde-b300044e1530
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.overview.field_title
+    - field.field.paragraph.overview.field_view
+    - paragraphs.paragraphs_type.overview
+  module:
+    - viewfield
+id: paragraph.overview.default
+targetEntityType: paragraph
+bundle: overview
+mode: default
+content:
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewfield_default
+    label: above
+    settings:
+      view_title: hidden
+      always_build_output: false
+      empty_view_title: hidden
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

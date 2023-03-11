@@ -1,0 +1,32 @@
+uuid: bac0602f-bb6c-419d-a462-e89be11eb5de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.overview.field_title
+    - field.field.paragraph.overview.field_view
+    - paragraphs.paragraphs_type.overview
+  module:
+    - viewfield
+id: paragraph.overview.default
+targetEntityType: paragraph
+bundle: overview
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_view:
+    type: viewfield_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
