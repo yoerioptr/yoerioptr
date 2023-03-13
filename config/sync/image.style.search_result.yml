@@ -1,0 +1,13 @@
+uuid: 856f4e4e-8c01-49f1-ae11-03c9f203ab41
+langcode: en
+status: true
+dependencies: {  }
+name: search_result
+label: 'Search result'
+effects:
+  d0285083-c0b8-4e9a-90c7-0d6dbca13d66:
+    uuid: d0285083-c0b8-4e9a-90c7-0d6dbca13d66
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp

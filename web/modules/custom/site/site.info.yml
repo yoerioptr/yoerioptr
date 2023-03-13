@@ -1,8 +1,10 @@
-name: 'Basic site featrues'
+name: 'Basic site features'
 type: module
-description: 'Basic site featrues'
+description: 'Basic site features'
 package: 'Yoerioptr'
 core_version_requirement: ^9 || ^10
 
 dependencies:
+  - drupal:config_pages
   - drupal:core_event_dispatcher
+  - drupal:search_api

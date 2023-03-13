@@ -1,33 +1,31 @@
-{% if page.navigation %}
-  <div class="layout-navigation">
-    {{ page.navigation }}
-  </div>
-{% endif %}
-
-<div class="layout-container">
-  {% if page.messages %}
-    <aside class="layout-messages">
-      {{ page.messages }}
+<div class="app collapsed">
+  {% if page.sidebar %}
+    <aside class="app__side">
+      {{ page.sidebar }}
     </aside>
   {% endif %}
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
+  {% if page.content or page.footer or page.messages %}
+    <div class="app__main">
+      {% if page.content %}
+        <main class="content">
+          {{ page.content }}
+        </main>
+      {% endif %}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>
+      {% if page.footer %}
+        <footer class="footer">
+          {{ page.footer }}
+        </footer>
+      {% endif %}
 
-    <div class="layout-content">
-      {{ page.content }}
+      {% if page.messages %}
+        <div class="messages">
+          {{ page.messages }}
+        </div>
+      {% endif %}
     </div>
-
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
   {% endif %}
 
+  <span class="toggle"></span>
 </div>

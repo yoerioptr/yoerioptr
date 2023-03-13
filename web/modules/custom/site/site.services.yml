@@ -4,6 +4,12 @@ services:
     class: \Drupal\site\EventSubscriber\OverrideEntityClasses
     tags:
       - { name: 'event_subscriber' }
+  site.event_subscriber.define_custom_themes:
+    class: \Drupal\site\EventSubscriber\DefineCustomThemes
+    arguments:
+      - '@extension.list.module'
+    tags:
+      - { name: 'event_subscriber' }
 
   # Repositories
   site.repository.page:

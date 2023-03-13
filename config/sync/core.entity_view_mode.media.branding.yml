@@ -1,0 +1,10 @@
+uuid: 896cc7bd-3ef6-4d00-8160-ed554fb4723d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.branding
+label: Branding
+targetEntityType: media
+cache: true

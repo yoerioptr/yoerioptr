@@ -57,12 +57,10 @@ final class OverrideEntityClasses implements EventSubscriberInterface {
   }
 
   public static function getSubscribedEvents(): array {
-    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER] = [
-      ['overrideMediaBundleClasses'],
-      ['overrideNodeBundleClasses'],
-      ['overrideParagraphBundleClasses'],
-      ['overrideTaxonomyTermBundleClasses'],
-    ];
+    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideMediaBundleClasses'];
+    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideNodeBundleClasses'];
+    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideParagraphBundleClasses'];
+    $events[EntityHookEvents::ENTITY_BUNDLE_INFO_ALTER][] = ['overrideTaxonomyTermBundleClasses'];
 
     return $events;
   }

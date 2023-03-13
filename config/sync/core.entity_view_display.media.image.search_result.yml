@@ -1,0 +1,33 @@
+uuid: 8fc4a9b0-9c82-47b1-8d06-6df770306915
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.search_result
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.search_result
+  module:
+    - responsive_image
+id: media.image.search_result
+targetEntityType: media
+bundle: image
+mode: search_result
+content:
+  field_media_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: search_result
+      image_link: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

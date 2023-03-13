@@ -1,0 +1,23 @@
+uuid: 6b3f92b1-d037-4e67-b4e0-c7ed8e358ba2
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.site_branding
+    - field.field.config_pages.site_branding.field_media_single
+  module:
+    - media_library
+id: config_pages.site_branding.default
+targetEntityType: config_pages
+bundle: site_branding
+mode: default
+content:
+  field_media_single:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  label: true

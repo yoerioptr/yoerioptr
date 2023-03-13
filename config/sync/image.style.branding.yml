@@ -1,0 +1,21 @@
+uuid: 994b4858-2f3f-4b51-b7fa-4aadbc39fab2
+langcode: en
+status: true
+dependencies: {  }
+name: branding
+label: Branding
+effects:
+  5dd20746-8967-4a72-8d8e-3aa5fb7e3dc6:
+    uuid: 5dd20746-8967-4a72-8d8e-3aa5fb7e3dc6
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
+  c5f72663-c4a4-450c-9199-21ecbbe85a4f:
+    uuid: c5f72663-c4a4-450c-9199-21ecbbe85a4f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 240
+      height: 240
+      anchor: center-center

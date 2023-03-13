@@ -5,6 +5,6 @@ dependencies:
   module:
     - node
 id: node.search_result_tile
-label: 'Search result tile'
+label: 'Search result'
 targetEntityType: node
 cache: true

@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_company
+    - field.storage.node.field_date_start
     - field.storage.node.field_technology
     - search_api.server.elastic
   module:
     - node
     - search_api
+    - site
 id: project
 name: Project
 description: ''
@@ -22,6 +24,18 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_company
+  date_range:
+    label: 'Date range (processed)'
+    property_path: project_date_range
+    type: date
+  start_date:
+    label: 'Start date'
+    datasource_id: 'entity:node'
+    property_path: field_date_start
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_start
   technology:
     label: Technology
     datasource_id: 'entity:node'
@@ -53,6 +67,7 @@ processor_settings:
   entity_status: {  }
   entity_type: {  }
   language_with_fallback: {  }
+  project_date_range: {  }
   rendered_item: {  }
 tracker_settings:
   default:

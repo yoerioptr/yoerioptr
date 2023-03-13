@@ -1,25 +1,25 @@
-uuid: bf940b57-fe87-4a1e-905d-046557dd4278
+uuid: 642df2d6-f4dc-494b-a16c-c37878fd6078
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.socials
   module:
     - system
   theme:
     - yoerioptr
-id: main_navigation
+id: social_media
 theme: yoerioptr
-region: navigation
+region: sidebar
 weight: 0
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:socials'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:socials'
+  label: Socials
   label_display: '0'
   provider: system
   level: 1
-  depth: 1
+  depth: 0
   expand_all_items: false
 visibility: {  }

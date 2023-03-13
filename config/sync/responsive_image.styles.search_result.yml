@@ -1,0 +1,18 @@
+uuid: a16bb2ca-3876-4995-a389-39bbeb53a402
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.search_result
+  theme:
+    - yoerioptr
+id: search_result
+label: 'Search result'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: search_result
+    breakpoint_id: yoerioptr.extreme
+    multiplier: 1x
+breakpoint_group: yoerioptr
+fallback_image_style: search_result

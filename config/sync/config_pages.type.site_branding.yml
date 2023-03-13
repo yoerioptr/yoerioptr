@@ -1,0 +1,17 @@
+uuid: e22490ca-ec24-4863-bb8e-ff68753c096d
+langcode: en
+status: true
+dependencies: {  }
+id: site_branding
+label: 'Site branding'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''
